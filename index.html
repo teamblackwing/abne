@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'VT323', monospace;
+            color: #663399;
+            --x: 50%;
+            --y: 50%;
+            background-image: radial-gradient(circle at var(--x) var(--y), rgba(229, 231, 235, 0.4) 0%, transparent 60%), linear-gradient(180deg, #f5f6f7 0%, #ffffff 100%);
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero {
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            object-fit: contain;
+            margin-bottom: -1.5rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-transform: lowercase;
+            margin: 0;
+            background-image: linear-gradient(to right, #663399, #8B008B, #9400D3, #4B0082, #663399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            animation: gradientFlow 5s linear infinite;
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        h1 a {
+            color: inherit;
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+
+        h1 a:hover {
+            text-decoration: underline;
+        }
+
+        .action-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background: transparent;
+            font-size: 1.15rem;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            overflow: hidden;
+            border-radius: 0;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: linear-gradient(#f5f6f7, #ffffff) padding-box, linear-gradient(100deg, #663399, #8B008B, #9400D3, #4B0082) border-box;
+            border: 2px solid transparent;
+            background-size: 200% auto;
+            animation: gradientFlow 5s linear infinite;
+        }
+
+        .action-button .button-text {
+            color: transparent;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            background-image: linear-gradient(to right, #663399, #8B008B, #9400D3, #4B0082, #663399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            animation: gradientFlow 5s linear infinite;
+        }
+
+        .action-button:hover,
+        .action-button:focus-visible,
+        .action-button:active {
+            background-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <a href="https://www.youtube.com/@AIRBORNE-F1" target="_blank">
+            <img class="hero"
+                src="https://media.discordapp.net/attachments/1392397054927568962/1411742280595017809/0a46ad73-8191-4b8c-89e5-6571d554a266_removalai_preview.png?ex=68b5c2f4&is=68b47174&hm=78f20938aeb7cf04d4aa84a59fc567fab0bd2e685c0f32debbed141a314189fa&=&format=webp&quality=lossless&width=1200&height=874"
+                alt="Brand graphic" />
+        </a>
+
+        <h1 class="text-5xl md:text-6xl lowercase">Coming <a href="https://dheeran.vercel.app/" target="_blank">Soon</a>
+        </h1>
+
+        <a href="https://instagram.com/airbornestem" target="_blank" class="action-button"
+            aria-label="Follow us on Instagram">
+            <span class="button-text">Follow us on Instagram</span>
+        </a>
+    </div>
+
+    <script>
+        document.body.addEventListener('mousemove', (e) => {
+            document.body.style.setProperty('--x', `${e.clientX}px`);
+            document.body.style.setProperty('--y', `${e.clientY}px`);
+        });
+    </script>
+</body>
+
+</html>
